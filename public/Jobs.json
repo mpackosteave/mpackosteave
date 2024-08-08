@@ -1,0 +1,15 @@
+[
+     {
+        "id":1,
+        "companyName": "BERNICE TECH" ,
+        "JobTitle":"Teacher" ,
+        "companyLogo":"/image/home,jpg",
+        "minPrice": "30" ,
+        "maxPrice": "50" ,
+        "salaryType": "",
+        "jobLocation": "" ,
+        "postingDate": "" ,
+        "exprienceLevel": "" ,
+        "employmentTime": ""
+    }
+]
