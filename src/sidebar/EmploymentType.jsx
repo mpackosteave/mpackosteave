@@ -1,10 +1,10 @@
 import React from 'react'
 import InputFiel from '../Component/InputFiel'
 
-const Location = ({handleChange}) => {
+const EmploymentType = ({handleChange}) => {
   return (
     <div>
-        <h4 className='text-lg font-medium mb-2'>Location</h4>
+        <h4 className='text-lg font-medium mb-2'>Type of employment</h4>
 
         <div>
             <label className='sidebar-Label-container'>
@@ -18,26 +18,26 @@ const Location = ({handleChange}) => {
 
             <InputFiel  
             handleChange={handleChange} 
-            value="kumba" 
-            title="Kumba" 
+            value="full-time" 
+            title="Full-time" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
-            value="buea" 
-            title="Buea" 
+            value="temporary" 
+            title="Temporary" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
-            value="douala" 
-            title="Douala" 
+            value="part-time" 
+            title="Part-time" 
             name="test"
             />
-              <InputFiel  
+             <InputFiel  
             handleChange={handleChange} 
-            value="bonaberi" 
-            title="Bonaberi" 
+            value="full-time" 
+            title="Full-time" 
             name="test"
             />
 
@@ -46,4 +46,4 @@ const Location = ({handleChange}) => {
   )
 }
 
-export default Location
+export default EmploymentType

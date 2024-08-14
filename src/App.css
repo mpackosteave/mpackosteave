@@ -16,16 +16,6 @@ li{
     list-style: none;
 }
 
-#error{
-    padding-left: 300px;
-    margin: 20px auto;
-}
-
-#text{
-    padding-left: 100px;
-    text-align: center;
-}
-
 .btns{
     padding: 10px 20px;
     margin-right: 6px;
@@ -141,7 +131,7 @@ li{
     border-color: #f7f7f7f7;
 }
 
-/* create a job page */
+ /*create a job page */
 
 /* .create-job-flex{
     @apply flex flex-col Lg:flex-row items-center justify-between gap-8;
@@ -149,4 +139,4 @@ li{
 
 .create-job-input {
     @apply block w-full flex-1 bg-white py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6;
-} */
+}  */

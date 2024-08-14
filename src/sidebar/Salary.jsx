@@ -1,10 +1,18 @@
 import React from 'react'
+import Button from '../Component/Button'
 import InputFiel from '../Component/InputFiel'
 
-const Location = ({handleChange}) => {
+const Salary = ({handleChange,handleClick}) => {
   return (
     <div>
-        <h4 className='text-lg font-medium mb-2'>Location</h4>
+        <h4 className='text-lg font-medium mb-2'>Salary</h4>
+        
+        <div className='mb-4'>
+            <Button onClickHandler={handleClick} value='' title= "Hourly"/>
+            <Button onClickHandler={handleClick} value='monthly' title= "Monthly"/>
+            <Button onClickHandler={handleClick} value='Yearly' title= "Yearly"/>
+        </div>
+
 
         <div>
             <label className='sidebar-Label-container'>
@@ -16,34 +24,35 @@ const Location = ({handleChange}) => {
                 <span className='checkmark'></span>All
             </label>
 
-            <InputFiel  
+            <InputFiel
             handleChange={handleChange} 
-            value="kumba" 
-            title="Kumba" 
+            value={20} 
+            title="< 20000k" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
-            value="buea" 
-            title="Buea" 
+            value={40} 
+            title="< 40000k" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
-            value="douala" 
-            title="Douala" 
+            value={60} 
+            title="< 60000k" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
-            value="bonaberi" 
-            title="Bonaberi" 
+            value={80} 
+            title="< 80000k" 
             name="test"
             />
 
         </div>
+
     </div>
   )
 }
 
-export default Location
+export default Salary
