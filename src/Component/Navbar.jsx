@@ -18,7 +18,7 @@ const Navbar = () => {
     <header className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
         <nav className='flex justify-between items-center py-6'> 
             {/* add logo*/}
-            <a href="/" className='flex item-center gap-2 text-2xl text-black'><span>JobPortal</span></a>
+            <a href="/" className='flex item-center gap-2 text-2xl text-black'><span>Employment App</span></a>
 
             {/* nav item for large divice */}
             <ul className='hidden md:flex gap-12'>
@@ -63,7 +63,8 @@ const Navbar = () => {
                     </li>
                 ))}
 
-                <li className='text-white py-1'><Link to='/login'>Long in</Link></li>
+                <li className='text-white py-1'><Link to='/login'>Log in</Link></li>
+                <li className='text-white py-1'><Link to='/sign-up'>Sign up</Link></li>
             </ul>
         </div>
     </header>

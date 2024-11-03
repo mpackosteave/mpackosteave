@@ -1,61 +1,40 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form"
-import CreatableSelect from 'react-select/creatable';
+import React, { useState } from 'react'
+import app from '../Firebase/firebase.config';
+import { getAuth, signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { registerVersion } from 'firebase/app';
 
 
-const PostJob = () => {
-    const [selectedOption, setSelectedOption] = useState(null);
-    const {
-        register,
-        handleSubmit, reset,
-        formState: { errors },
-      } = useForm()
+const Login = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] =useState('')
+
+    // const auth = getAuth();
+    const googleProvider = new GoogleAuthProvider();
+    const handleLogin = () =>{
+        signInWithPopup(auth, googleProvider).then((result) => {
+           
+            const user = result.user;
+            console.log(user)
+            
+          }).catch((error) => {
+
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+          });
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(`username:${username}, password: ${password}`)
+      }
+
     
-      const onSubmit = (data) => {
-        data.skills = selectedOption;
-         console.log("1", data);
 
-         fetch('http://127.0.0.1:5176/post-job', {
-            method:'POST',
-            header: {'Content-Type' : "appliction/json"},
-            body:JSON.stringify(data)
-         })
-        //  .then(res => res.json()).then((result) => {
-        //     console.log("2", data)
-        //  })
 
-        .then(res => res.json())
-        .then((result) => {
-            console.log(result)
-            if (result.acknowledged === true) {
-                console.log("2", data)
-
-                alert('Job Posted Successfully!!!')
-            }
-            reset()
-        })
-       
-    };
-    
-    const options = [
-        {value: "JavaScript",label:"JavaScript"},
-        {value: "C++",label:"C++"},
-        {value: "HTML",label:"HTML"},
-        {value: "CSS",label:"CSS"},
-        {value: "TypeScript",label:"TypeScript"},
-        {value: "React.js",label:"React.js"},
-        {value: "Python",label:"Python"},
-        {value: "Djongo",label:"Djongo"},
-        {value: "Java",label:"Java"},
-        {value: "C #",label:"C #"},
-        {value: "Expres.js",label:"Expres.js"},
-
-    ]
-  return (
-    <div className='max-w-srcreen-2xl container mx-auto xl:px-24 px-4'>
-        {/* form */}
-        <div className='bg-[#FAFAFA] py-10px px-4 lg:px-16'>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 {/* 1st row */}
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div className="lg-w-1/2 w-full">
@@ -189,9 +168,14 @@ const PostJob = () => {
 
             <input type="submit"className="block mt-12 bg-red text-white font-semibold px-5 py-3 rounded-sm cursor-pointer" />
             </form>
-        </div>
+      
+
+
+  return (
+    <div className='h-screen w-full flex items-center justify-center'>
+        <button className='bg-red px-8 py-2 text-white' onClick={handleLogin}>Login</button>
     </div>
   )
 }
 
-export default PostJob
+export default Login

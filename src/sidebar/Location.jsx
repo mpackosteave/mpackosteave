@@ -19,25 +19,31 @@ const Location = ({handleChange}) => {
             <InputFiel  
             handleChange={handleChange} 
             value="kumba" 
-            title="Kumba" 
+            title="KUMBA" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
             value="buea" 
-            title="Buea" 
+            title="BUEA" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
             value="douala" 
-            title="Douala" 
+            title="DOUALA" 
             name="test"
             />
               <InputFiel  
             handleChange={handleChange} 
             value="bonaberi" 
-            title="Bonaberi" 
+            title="BONABERI" 
+            name="test"
+            />
+             <InputFiel  
+            handleChange={handleChange} 
+            value="akwa" 
+            title="AKWA" 
             name="test"
             />
 

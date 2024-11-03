@@ -1,0 +1,72 @@
+[
+    {
+        "id" : 1,
+        "title": "Front End Dev",
+        "status":"Job Opening ",
+        "salary":"Average salary $23,987 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 2,
+        "title": "Back End Dev",
+        "status":"Job Opening ",
+        "salary":"Average salary $76,383 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 3,
+        "title": "Sanitoyr Agent",
+        "status":"Job Opening ",
+        "salary":"Average salary $43,098 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 4,
+        "title": "NetWork Eng",
+        "status":"Job Opening ",
+        "salary":"Average salary  $48,046 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 5,
+        "title": "Crew Memeber",
+        "status":"Job Opening ",
+        "salary":"Average salary $32,045 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 6,
+        "title": "DJ",
+        "status":"Job Opening ",
+        "salary":"Average salary $32,045 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 7,
+        "title": "Asistan Man",
+        "status":"Job Opening ",
+        "salary":"Average salary $70,043 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 8,
+        "title": "Asistan general",
+        "status":"Job Opening ",
+        "salary":"Average salary  $94,067 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 9,
+        "title": "Asistan Dj",
+        "status":"Job Opening ",
+        "salary":"Average salary $12,086 per year",
+        "skill":"Skill"
+    },
+    {
+        "id" : 10,
+        "title": "App Dev",
+        "status":"Job Opening ",
+        "salary":"Average salary $26,012 per year",
+        "skill":"Skill"
+    }
+]
